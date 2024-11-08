@@ -1,0 +1,161 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css"  href="{% static 'agency/slick/slick.css' %}" />
+    <link rel="stylesheet" type="text/css"  href="{% static 'agency/slick/slick-theme.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+
+    <link href="{% static 'agency/css/main.css' %}" rel="stylesheet" />
+
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-dark navbar-expand bg-dark my-header">
+        <div class="container-lg justify-content-between">
+          <div>
+            <div class="dropdown d-flex">
+              <a
+                class="navbar-brand d-sm-none dropdown-toggle"
+                href="#"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                {% include 'agency/swg/menu.html' %}</a
+              >
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li>
+                  <a class="dropdown-item active" href="#">Преимущества</a>
+                </li>
+                <li><a class="dropdown-item" href="#photo">Фотографииn</a></li>
+              </ul>
+              <a class="navbar-brand" href="#">
+                {% include 'agency/swg/logo.html' %}</a
+              >
+            </div>
+          </div>
+
+          <ul class="navbar-nav d-none d-sm-flex gap-md-5">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"
+                >Преимущества</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#photo">Фотографии</a>
+            </li>
+          </ul>
+          <button class="btn btn-danger my-but" type="submit">ВХОД</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="mt-5">
+      <div class="container-lg">
+        <div class="row mx-auto text-center" style="max-width: 745px">
+          <h1 class="fs-1" style="color: #0a121e">Космическое агентство</h1>
+          <p
+            style="
+              color: #3c3c3c;
+              font-size: 18px;
+              font-weight: 400;
+              line-height: 30px;
+            "
+          >
+            Национальное управление по аэронавтике и исследованию космического
+            пространства — ведомство, относящееся к федеральному правительству
+            Российской Федерации и подчиняющееся непосредственно президенту
+            Российской Федерации.
+          </p>
+        </div>
+        <div class="row align-items-center gap-5 justify-content-center mt-5">
+          <div class="col-12 col-md-6">
+            <div class="row">
+              <div class="col text-center">
+                {% include 'agency/swg/shuttle.html' %}
+                <p class="">Спейс шаттлы —пилотируемые корабли</p>
+              </div>
+              <div class="col text-center">
+                {% include 'agency/swg/telescope.html' %}
+                <p>Лучшее телескопическое оборудование</p>
+              </div>
+            </div>
+            <div class="row mt-5">
+              <div class="col text-center">
+                {% include 'agency/swg/moon.html' %}
+                <p class="">Целимся на Луну и Марс</p>
+              </div>
+              <div class="col text-center">
+                {% include 'agency/swg/medal.html' %}
+                <p>Золотая медаль по научным исследованиям</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 space-img">
+            <img class="img-fluid" src="{% static 'agency/img/space.png' %}" />
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container-lg py-5" id="photo">
+        <h1 class="fs-2 text-center mb-5" style="color: white">Фотографии</h1>
+        
+         <div class="slider-for mb-5 mx-auto" > 
+          <a href="{% static 'agency/img/picture0.png' %}" data-fancybox="gallery" >         
+            <img class="img-fluid test-clc" src="{% static 'agency/img/picture0.png' %}" />
+          </a>
+          <a href="{% static 'agency/img/picture1.png' %}" data-fancybox="gallery">
+            <img class="img-fluid" src="{% static 'agency/img/picture1.png' %}" />
+          </a>
+          <a href="{% static 'agency/img/picture2.png' %}" data-fancybox="gallery">
+            <img class="img-fluid" src="{% static 'agency/img/picture2.png' %}" />
+          </a>
+          <a href="{% static 'agency/img/picture3.png' %}" data-fancybox="gallery">
+            <img class="img-fluid " src="{% static 'agency/img/picture3.png' %}" />
+          </a>
+          <a href="{% static 'agency/img/picture4.png' %}" data-fancybox="gallery">
+            <img class="img-fluid" src="{% static 'agency/img/picture4.png' %}" />
+          </a>
+        </div> 
+
+        <div class="slider-nav">          
+            <img class="nav-img img-fluid" src="{% static 'agency/img/picture0.png' %}"/>
+            <img class="nav-img img-fluid" src="{% static 'agency/img/picture1.png' %}"/>
+            <img class="nav-img img-fluid" src="{% static 'agency/img/picture2.png' %}"/>
+            <img class="nav-img img-fluid" src="{% static 'agency/img/picture3.png' %}"/>
+            <img class="nav-img img-fluid" src="{% static 'agency/img/picture4.png' %}"/>
+        </div> 
+    </footer>
+
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+    
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="{% static 'agency/slick/slick.min.js' %}" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script src="{% static 'agency/js/main.js' %}" ></script>
+    
+  </body>
+</html>
